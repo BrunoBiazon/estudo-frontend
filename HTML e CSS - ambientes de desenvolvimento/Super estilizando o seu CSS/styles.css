@@ -1,0 +1,10 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+span {
+    color: #22d4fd;
+    font-weight: bold;
+    padding: 10px;
+}
