@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+:root {
+    --cor-primaria: #22d4fd;;
+    --cor-fundo: black;
+}
 
 .apresentacao {
     margin: 10%;
@@ -14,32 +18,36 @@
 
 body {
     color: white;
-    background-color: black;
+    background-color: var(--cor-fundo);
     box-sizing: border-box;
 }
 
 .titulo-destaque {
-    color: #22d4fd;
+    color: var(--cor-primaria);
     font-weight: bold;
     padding: 10px;
 }
 
+.apresentacao__imagem {
+    width: 50%;
+    border-radius: 14px;
+}
+
 .apresentacao__conteudo{
-    width: 615px;
+    width: 50%;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: "Quantico", sans-serif;
 }
 
 .apresentacao__conteudo__descricao {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: "Quantico", sans-serif;
 }
 
 .apresentacao__link {
-    
     font-family: "Quantico", sans-serif;
     display: flex;   
     flex-direction: column;
@@ -49,33 +57,34 @@ body {
 }
 
 .apresentacao__link__link {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
-    width: 280px;
+    width: 50%;
     font-weight: bold;
     padding: 10px 0;
     text-decoration: none;
     text-align: center;
     border-radius: 14px;
-    border: 3px solid #22d4fd;
+    border: 3px solid var(--cor-primaria);
     display: flex;
     justify-content: center;
 }
 
 .apresentacao__link__link:hover {
-    background-color: #272727;
+    background-color: var(--cor-fundo);
     font-size: 24px;
     color: white;
-    width: 280px;
+    width: 30%;
     font-weight: bold;
     padding: 10px 0;
     text-decoration: none;
     text-align: center;
     border-radius: 14px;
-    border: 3px solid #22d4fd;
+    border: 3px solid var(--cor-primaria);
     display: flex;
     justify-content: center;
-}
+    transition: 0.5s;
+} 
 
 .apresentacao__link__subtitulo {
     margin-top: 18px;
@@ -95,13 +104,13 @@ footer {
     font-family: 'Kronam One', sans-serif;
     text-align: center;
     padding: 5px;
-    background-color: #22d4fd;
+    background-color: var(--cor-primaria);
     color: white;
 }
 
 header {
-    background-color: #22d4fd;
-    padding: 10px;
+    background-color: var(--cor-primaria);
+    padding: 2% 0% 0% 15%;
     color: white;
 }
 
@@ -157,4 +166,19 @@ header nav a {
     margin-right: auto;       
     line-height: 1.5;    
     word-break: break-all; 
+}
+
+@media (max-width: 800px) {
+    .header{
+        padding: 10%;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; 
+        padding: 5%;
+    }  
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }
